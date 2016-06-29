@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load milo_tags %}
+{% block content %}
+    <table>
+        <thead>
+        <tr>
+            <td>Username</td>
+            <td>Birthday</td>
+            <td>Eligible</td>
+            <td>Random Number</td>
+            <td>BizzFuzz</td>
+        </tr>
+        </thead>
+        <tbody>
+
+        {% for profile in profiles %}
+            <tr>
+                <td>{{ profile.user }}</td>
+                <td>{{ profile.birthday }}</td>
+                <td>{% eligible profile.birthday %}</td>
+                <td>{{ profile.random_number }}</td>
+                <td>{% bizzfuzz profile.random_number %}</td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+{% endblock %}
