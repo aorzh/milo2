@@ -16,12 +16,12 @@ def eligible(birthday):
 def bizzfuzz(rand):
     value = rand
     rand = int(rand)
-    if rand % 5 == 0:
-        value = 'Fuzz'
+    if rand % 3 == 0 and rand % 5 == 0:
+        return 'BizzFuzz'
     elif rand % 3 == 0:
-        value = 'Bizz'
-    elif rand % 3 == 0 and rand % 5 == 0:
-        value = 'BizzFuzz'
+        return 'Bizz'
+    elif rand % 5 == 0:
+        return 'Fuzz'
     return value
 
 
