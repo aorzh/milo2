@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form method="post" action=".">{% csrf_token %}
+        {{ form.media }}
+        {% for field in form %}
+            <p>{{ field.label }}</p>
+            <p> {{ field }} {% for error in field.errors %}{{ error }}{% endfor %}</p>
+        {% endfor %}
+        <div class="clear"></div>
+        <input type="submit" class="save_button" value="Update"/>
+    </form>
+{% endblock %}

@@ -1,5 +1,12 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block content %}
-{{ user }}
+    <a href="/edit/{{ profile.username }}">Edit</a>
+    <a href="/del/{{ profile.username }}">Delete</a>
+    <ul>
+        <li>Name: {{ profile.username }}</li>
+        <li> B-day: {{ profile.birthday }}</li>
+        <li>Random number: {{ profile.random_number }}</li>
+    </ul>
+
 {% endblock %}

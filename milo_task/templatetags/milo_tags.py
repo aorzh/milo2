@@ -1,5 +1,5 @@
 from django import template
-from datetime import date
+from datetime import date, datetime
 
 register = template.Library()
 
@@ -15,6 +15,7 @@ def eligible(birthday):
 @register.simple_tag()
 def bizzfuzz(rand):
     value = rand
+    rand = int(rand)
     if rand % 5 == 0:
         value = 'Fuzz'
     elif rand % 3 == 0:
@@ -26,5 +27,6 @@ def bizzfuzz(rand):
 
 def calculate_age(born):
     today = date.today()
+    # born = datetime.strptime(born, "%Y-%d-%m")
     return today.year - born.year - ((today.month, today.day) < (born.month, born.day))
 
