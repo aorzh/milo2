@@ -2,7 +2,7 @@
 This is test task with few django templates  
 
 ~Install~  
-1. Install virtualenv: virtualenv -p python3 envname  
+1. Create virtualenv with python 3.5 (virtualenv -p python3 envname)   
 2. Activate venv: source envname/bin/activate  
 3. Clone repo: git clone git@github.com:aorzh/milo2.git  
 4. Install dependencies: pip install -r dependencies.txt   
