@@ -22,4 +22,5 @@ class CustomUserTable(tables.Table):
         model = CustomUser
         exclude = ['last_login', 'is_active', 'is_admin', 'password', 'id']
         template = 'django_tables2/bootstrap.html'
+        orderable = False
         attrs = {'class': 'paleblue'}

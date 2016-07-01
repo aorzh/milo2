@@ -3,6 +3,8 @@
 {% load milo_tags %}
 {% load django_tables2 %}
 {% block content %}
-     {% render_table table %}
-<a href="to_csv/">Export</a>
+    {% render_table table %}
+{% endblock %}
+{% block footer %}
+    <a href="to_csv/">Export to CSV</a>
 {% endblock %}
